@@ -7,7 +7,7 @@
             MyInfo myInfo = new MyInfo();
             myInfo.NameChanged += MyInfo_NameChanged;
 
-            myInfo.Name = "Иван";
+            myInfo.Name = "Анна";
             myInfo.Name = "Иван";
         }
 
