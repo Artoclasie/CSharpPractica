@@ -46,7 +46,6 @@ namespace Ex_21_1
             }
         }
 
-
         public bool IsEmpty()
         {
             return empty;
