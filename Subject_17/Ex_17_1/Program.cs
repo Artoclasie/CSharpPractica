@@ -1,5 +1,4 @@
 ﻿using ClassLibrary1;
-using System.Drawing;
 
 namespace Ex_17_1
 {
@@ -7,7 +6,6 @@ namespace Ex_17_1
     {
         static void Main(string[] args)
         {
-            Console.OutputEncoding = System.Text.Encoding.UTF8;
             ClaTriangle triangle = new ClaTriangle();
             triangle.InputSides(3, 4, 5);
 
@@ -27,6 +25,5 @@ namespace Ex_17_1
             Console.WriteLine("Периметр прямоугольника: " + rectangle.CalculatePerimeter());
             Console.WriteLine("Площадь прямоугольника: " + rectangle.CalculateArea());
         }
-    }
     }
 }

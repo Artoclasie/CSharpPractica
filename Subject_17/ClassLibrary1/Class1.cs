@@ -46,7 +46,8 @@ namespace ClassLibrary1
 
     public class Rectangle
     {
-        private double length, width;
+        private double length;
+        private double width;
 
         public void InputSides(double l, double w)
         {

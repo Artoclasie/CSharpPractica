@@ -38,12 +38,12 @@ namespace Srez_1_2
 
             WriteLine("mass:");
 
-            foreach (int item in mass)
+            foreach (int item in mass) // 1 способ ввода 
             {
                 Write($"{item} ");
             }
 
-            WriteLine($"\n{string.Join(" ", mass)}");
+            WriteLine($"\n{string.Join(" ", mass)}"); // 2 способ ввода, для двумерных и более массивов не подойдет, но очень удобен
         }
     }
 }
