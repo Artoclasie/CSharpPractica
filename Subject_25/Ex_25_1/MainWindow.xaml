@@ -6,7 +6,22 @@
         xmlns:local="clr-namespace:Ex_25_1"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+    <Grid x:Name="LayoutRoot" Background="white">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock x:Name="textBlockHello" Grid.Row="0" Margin="31,59,167,29" RenderTransformOrigin="0.006,0.093"/>
+        <TextBox x:Name="textBoxEnterName" Grid.Row="1" Margin="54,36,54,36"/>
+        <Button x:Name="buttonRun" Content="Сказать Имя" Grid.Row="2"/>
+        <Button x:Name="buttonAbout" Content="Справка" Grid.Row="2" Grid.Column="1" Width="200" Height="60"/>
+        <Label Content="Hello world" HorizontalAlignment="Left" Margin="281,59,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Height="83" Width="273" FontSize="45"/>
     </Grid>
+
 </Window>

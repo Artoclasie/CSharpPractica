@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Ex_25_1
+namespace Ex_25_2
 {
     /// <summary>
     /// Логика взаимодействия для MainWindow.xaml
@@ -25,12 +25,13 @@ namespace Ex_25_1
             InitializeComponent();
             buttonRun.Click += ButtonRun_Click;
             buttonAbout.Click += ButtonAbout_Click;
+            buttonClose.Click += ButtonClose_Click;
         }
 
         private void ButtonAbout_Click(object sender, RoutedEventArgs e)
         {
-            string info=$"О программе {this.Title}";
-            Window1 aboutApp = new Window1(info);
+            string info = $"О программе {this.Title}";
+            Window2 aboutApp = new Window2(info);
             aboutApp.ShowDialog();
         }
 
@@ -40,13 +41,18 @@ namespace Ex_25_1
             string input = string.Empty;
             if (string.IsNullOrEmpty(textBoxEnterName.Text) || (string.IsNullOrWhiteSpace(textBoxEnterName.Text)))
             {
-                input = "world";
+                input = "name";
             }
             else
-            { 
+            {
                 input = textBoxEnterName.Text;
             }
             textBlockHello.Text = $"{hello} {input}";
+        }
+
+        private void ButtonClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
