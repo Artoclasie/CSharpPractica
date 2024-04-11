@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+
         <Grid.RowDefinitions>
             <RowDefinition Height="1.5*"/>
             <RowDefinition Height="5*"/>
@@ -20,35 +20,78 @@
         </Grid.ColumnDefinitions>
         <TextBlock x:Name="textBlockXMLPathFile" Grid.Row="0" Margin="10"></TextBlock>
         <Button x:Name="buttonOpenFile" Content="Открыть" Grid.Column="1" FontSize="16" Margin="10" ButtonBase.Click="buttonOpenFile_Click_1"></Button>
-        <Grid Grid.Row="1" Grid.Column="1" Margin="10">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="0.5*"/>
-                <RowDefinition Height="2*"/>
-                <RowDefinition Height="2*"/>
-            </Grid.RowDefinitions>
-            <TextBlock Text="Найти" Grid.Row="0" FontSize="14"/>
-            <TextBox x:Name="textBoxCountryName" Grid.Row="1" Margin="10"/>
-            <Button x:Name="buttonFindCountryName" Content="Найти" Grid.Row="2" FontSize="16" Grid.Column="1" Margin="10" Click="buttonFindCountryName_Click_1"/>
-        </Grid>
-        <TextBlock x:Name="textBlockXMlFileContent"
-                   Grid.Row="1"
-                   Grid.RowSpan="2"
-                   Margin="5"
-                   ScrollViewer.VerticalScrollBarVisibility="Auto"
-                   ScrollViewer.CanContentScroll="True"
-                   ScrollViewer.HorizontalScrollBarVisibility="Disabled"/>
-        <Grid Grid.Row="2" Grid.Column="1" Margin="10">
-            <Grid.RowDefinitions>
+
+        <Expander Header="Функциональность" Grid.Row="1" Grid.Column="1" Margin="10,10,10,113" Grid.RowSpan="2">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.5*"/>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="2*"/>
                     <RowDefinition Height="0.5*"/>
                     <RowDefinition Height="2*"/>
                     <RowDefinition Height="2*"/>
                 </Grid.RowDefinitions>
-        <TextBlock Text="Удаление" FontSize =" 14"/>
-        <TextBox x:Name="textBoxDeleteCountryName" Margin="10" Grid.Row="1"/>
-         <Button x:Name="buttonDelete" Content="Удалить" FontSize="16" Margin="10" Grid.Row="2" ButtonBase.Click="buttonDelete_Click_1"/>
-        </Grid>
+
+                <TextBlock Text="Найти" Grid.Row="0" FontSize="14"/>
+                <TextBox x:Name="textBoxCountryName" Grid.Row="1" Margin="10"/>
+                <Button x:Name="buttonFindCountryName" Content="Найти" Grid.Row="2" FontSize="16" Grid.Column="1" Margin="10" Click="buttonFindCountryName_Click_1"/>
+
+                <TextBlock Text="Удаление" Grid.Row="3" FontSize="14"/>
+                <TextBox x:Name="textBoxDeleteCountryName" Grid.Row="4" Margin="10"/>
+                <Button x:Name="buttonDelete" Content="Удалить" Grid.Row="5" FontSize="16" Margin="10" Click="buttonDelete_Click_1"/>
+            </Grid>
+        </Expander>
+
+        <TextBlock x:Name="textBlockXMlFileContent"
+                Grid.Row="1"
+                Grid.RowSpan="2"
+                Margin="5"
+                ScrollViewer.VerticalScrollBarVisibility="Auto"
+                ScrollViewer.CanContentScroll="True"
+                ScrollViewer.HorizontalScrollBarVisibility="Disabled"/>
+
+
+        <ListBox x:Name="listBoxCountries"
+        Grid.Row="1"
+        Grid.RowSpan="2"
+        Margin="5"
+        ScrollViewer.VerticalScrollBarVisibility="Auto"
+        ScrollViewer.CanContentScroll="True"
+        ScrollViewer.HorizontalScrollBarVisibility="Disabled"/>
+
+        <TreeView x:Name="treeViewCountries"
+Grid.Row="1"
+Grid.RowSpan="2"
+Margin="5"
+ScrollViewer.VerticalScrollBarVisibility="Auto"
+ScrollViewer.CanContentScroll="True"
+ScrollViewer.HorizontalScrollBarVisibility="Disabled"/>
+
+
+
         <Button x:Name="buttonAdd" Content="добавить" Grid.Row="3" FontSize="16" Margin="10" ButtonBase.Click="buttonAdd_Click_1"/>
         <Button x:Name="buttonExit" Content="выход" Grid.Row="3" Grid.Column="1" FontSize="16" Margin="10" Click="buttonExit_Click_1"/>
+        <Grid>
+
+
+            <TextBlock x:Name="textBlockXMlFileContet"
+                Grid.Row="1"
+                Grid.RowSpan="2"
+                Margin="5"
+                ScrollViewer.VerticalScrollBarVisibility="Auto"
+                ScrollViewer.CanContentScroll="True"
+                ScrollViewer.HorizontalScrollBarVisibility="Disabled"/>
+
+
+        </Grid>
+
+        <Expander Header="Способ отображения" Grid.Row="2" Grid.Column="1" Margin="10,138,10,10">
+            <StackPanel>
+                <RadioButton x:Name="radioButtonTextBlock" Content="TextBlock"/>
+                <RadioButton x:Name="radioButtonTreeView" Content="TreeView"/>
+                <RadioButton x:Name="radioButtonListBox" Content="ListBox"/>
+            </StackPanel>
+        </Expander>
     </Grid>
-        
+
 </Window>
