@@ -5,10 +5,10 @@ namespace Ex_1_2
     {
         static void Main(string[] args)
         {
-            WriteLine("M: ");
+            Write("M: ");
             int number_1 = Convert.ToInt32(ReadLine());
 
-            WriteLine("N: ");
+            Write("N: ");
             int number_2 = Convert.ToInt32(ReadLine());
 
             if (number_1%number_2==0)
